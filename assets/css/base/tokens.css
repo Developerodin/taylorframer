@@ -1,0 +1,30 @@
+:root {
+  --bg: #ffffff;
+  --fg: #000000;
+  --muted: #696969;
+  --dark: #000000;
+  --dark-soft: #111112;
+  --surface: #f7f7f7;
+  --pad-x: 40px;
+  --pad-section-y-top: 80px;
+  --pad-section-y-bottom: 120px;
+  --nav-h: 60px;
+  --font: "Inter", "Inter Display", system-ui, sans-serif;
+  --ls: -0.03em;
+  --radius-btn: 4px;
+  --radius-card: 14px;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --transition-fast: 0.25s ease;
+  --z-nav: 100;
+  --z-hero: 1;
+  --z-content: 2;
+  --bp-desktop: 1200px;
+  --bp-tablet: 810px;
+  --bp-mobile: 809px;
+}
+
+@media (max-width: 809px) {
+  :root {
+    --pad-x: 16px;
+  }
+}

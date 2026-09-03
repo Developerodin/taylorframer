@@ -1,0 +1,39 @@
+.section-meta {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 16px;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.48px;
+  line-height: 16px;
+}
+
+.section-meta__num {
+  justify-self: start;
+}
+
+.section-meta__title {
+  justify-self: center;
+  text-align: center;
+}
+
+.section-meta__year {
+  justify-self: end;
+  text-align: right;
+}
+
+.section-meta--on-dark {
+  color: #fff;
+}
+
+.section-rule {
+  border: 0;
+  border-top: 1px solid var(--fg);
+  margin: 12px 0 0;
+  width: 100%;
+}
+
+.section-rule--light {
+  border-top-color: #fff;
+}

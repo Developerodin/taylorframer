@@ -1,0 +1,145 @@
+.nav {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: var(--z-nav);
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  height: var(--nav-h);
+  padding: 18px var(--pad-x);
+  color: #fff;
+  transition: color var(--transition-fast);
+  pointer-events: none;
+}
+
+.nav > * {
+  pointer-events: auto;
+}
+
+.nav.is-dark {
+  color: #000;
+}
+
+.nav__logo {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: var(--ls);
+  flex-shrink: 0;
+  transition: opacity var(--transition-fast);
+}
+
+.nav__logo:hover {
+  opacity: 0.6;
+}
+
+.nav__clock {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: var(--ls);
+  white-space: nowrap;
+}
+
+.nav__links {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.nav__links a,
+.nav__contact {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: var(--ls);
+  transition: opacity var(--transition-fast);
+}
+
+.nav__links a:hover,
+.nav__contact:hover {
+  opacity: 0.6;
+}
+
+.nav__contact {
+  flex-shrink: 0;
+  margin-left: 8px;
+}
+
+.nav__menu {
+  margin-left: auto;
+  display: none;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: var(--ls);
+  transition: opacity var(--transition-fast);
+}
+
+.nav__menu:hover {
+  opacity: 0.6;
+}
+
+.nav__drawer {
+  position: fixed;
+  inset: 0;
+  z-index: calc(var(--z-nav) + 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 40px var(--pad-x) 48px;
+  background: #000;
+  color: #fff;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition:
+    opacity 0.35s var(--ease-out),
+    visibility 0.35s;
+}
+
+.nav__drawer.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.nav__drawer-close {
+  position: absolute;
+  top: 18px;
+  right: var(--pad-x);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.nav__drawer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.nav__drawer-links a {
+  font-size: clamp(32px, 8vw, 48px);
+  font-weight: 600;
+  letter-spacing: var(--ls);
+  line-height: 1.1;
+}
+
+@media (max-width: 1199px) {
+  .nav__links,
+  .nav__contact,
+  .nav__clock {
+    display: none;
+  }
+
+  .nav__menu {
+    display: inline;
+  }
+}
+
+@media (min-width: 1200px) {
+  .nav__menu {
+    display: none;
+  }
+
+  .nav__drawer {
+    display: none;
+  }
+}

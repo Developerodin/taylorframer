@@ -1,0 +1,122 @@
+.cta {
+  position: relative;
+  z-index: var(--z-content);
+  min-height: 80vh;
+  min-height: 80svh;
+  color: #fff;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  overflow: clip;
+}
+
+.cta__media {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.cta__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.2);
+  will-change: transform;
+  transform-origin: center center;
+}
+
+.cta__dim {
+  position: absolute;
+  inset: 0;
+  background: rgba(18, 18, 18, 0.5);
+  pointer-events: none;
+}
+
+.cta__content {
+  position: relative;
+  z-index: 1;
+  padding: var(--pad-x);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.cta h2 {
+  text-transform: uppercase;
+  font-size: clamp(32px, 5vw, 80px);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.footer {
+  position: relative;
+  z-index: var(--z-content);
+  background: var(--dark-soft);
+  color: #fff;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  gap: 32px 48px;
+  padding: 64px var(--pad-x) 80px;
+}
+
+.footer__brand {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer__logo {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: var(--ls);
+}
+
+.footer__credit {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.7);
+  letter-spacing: var(--ls);
+}
+
+.footer__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer__nav a {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: var(--ls);
+  transition: opacity var(--transition-fast);
+}
+
+.footer__nav a:hover {
+  opacity: 0.6;
+}
+
+.footer__back {
+  grid-column: 1 / -1;
+  margin-top: 16px;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: var(--ls);
+  transition: opacity var(--transition-fast);
+}
+
+.footer__back:hover {
+  opacity: 0.6;
+}
+
+@media (max-width: 809px) {
+  .footer {
+    grid-template-columns: 1fr;
+    padding: 48px var(--pad-x) 64px;
+  }
+
+  .footer__back {
+    margin-top: 8px;
+  }
+}
