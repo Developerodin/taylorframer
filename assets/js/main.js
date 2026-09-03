@@ -5,6 +5,7 @@ import { initWorksScale } from "./components/works-scale.js";
 import { initCtaScale } from "./components/cta-scale.js";
 import { initStatsCountUp } from "./components/stats.js";
 import { initTestimonials } from "./components/carousel.js";
+import { initContactForm } from "./components/contact-form.js";
 
 function createLenis() {
   if (typeof Lenis === "undefined") {
@@ -69,6 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initCtaScale(lenis);
   initStatsCountUp();
   initTestimonials();
+  initContactForm();
   initBackToTop(lenis);
   initAnchorScroll(lenis);
 });

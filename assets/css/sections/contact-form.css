@@ -1,0 +1,112 @@
+.page--dark {
+  background: var(--dark);
+  color: #fff;
+}
+
+.page--dark .footer {
+  background: var(--dark-soft);
+}
+
+.contact-page {
+  position: relative;
+  z-index: var(--z-content);
+  min-height: calc(100vh - 400px);
+  padding: 0 var(--pad-x) 80px;
+}
+
+.contact-page .page-hero {
+  background: transparent;
+  color: #fff;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  max-width: 1256px;
+}
+
+.contact-form__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.contact-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-form__field label {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: var(--ls);
+  text-transform: uppercase;
+}
+
+.contact-form__field input,
+.contact-form__field textarea {
+  width: 100%;
+  padding: 10px 0 14px;
+  border: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.85);
+  background: transparent;
+  color: #fff;
+  font: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: var(--ls);
+  border-radius: 0;
+  outline: none;
+  resize: vertical;
+}
+
+.contact-form__field input::placeholder,
+.contact-form__field textarea::placeholder {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.contact-form__field input:focus,
+.contact-form__field textarea:focus {
+  border-bottom-color: #fff;
+}
+
+.contact-form__submit {
+  width: 100%;
+  height: 48px;
+  margin-top: 8px;
+  border: 0;
+  border-radius: var(--radius-btn);
+  background: #fff;
+  color: #000;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: opacity var(--transition-fast);
+}
+
+.contact-form__submit:hover {
+  opacity: 0.85;
+}
+
+.contact-form__status {
+  min-height: 1.2em;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.contact-form__status.is-success {
+  color: #fff;
+}
+
+@media (max-width: 809px) {
+  .contact-form__row {
+    grid-template-columns: 1fr;
+  }
+}

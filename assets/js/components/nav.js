@@ -1,19 +1,25 @@
 export function initNav(lenis) {
   const nav = document.querySelector(".nav");
-  const hero = document.querySelector(".hero");
+  if (!nav) return;
+
+  const hero = document.querySelector(".hero, .about-hero");
   const menuBtn = document.querySelector(".nav__menu");
   const drawer = document.querySelector(".nav__drawer");
   const closeBtn = document.querySelector(".nav__drawer-close");
   const drawerLinks = drawer?.querySelectorAll("a") ?? [];
   const darkSections = document.querySelectorAll(
-    ".services, .cta, .footer"
+    ".services, .cta, .footer, .about-hero"
   );
-
-  if (!nav || !hero) return;
 
   const isOverDarkSurface = () => {
     const navMid = nav.offsetHeight / 2;
     const sampleX = Math.min(120, window.innerWidth / 2);
+
+    if (document.body.classList.contains("page--dark")) {
+      const footer = document.querySelector(".footer");
+      if (!footer) return true;
+      return footer.getBoundingClientRect().top > navMid;
+    }
 
     for (const section of darkSections) {
       const rect = section.getBoundingClientRect();
@@ -22,12 +28,13 @@ export function initNav(lenis) {
       }
     }
 
-    const heroBottom = hero.getBoundingClientRect().bottom;
-    if (heroBottom > nav.offsetHeight + 8) {
-      return true;
+    if (hero) {
+      const heroBottom = hero.getBoundingClientRect().bottom;
+      if (heroBottom > nav.offsetHeight + 8) {
+        return true;
+      }
     }
 
-    // Fallback: sample a point under the nav
     const el = document.elementFromPoint(sampleX, navMid);
     if (!el) return false;
     let node = el;
@@ -36,7 +43,8 @@ export function initNav(lenis) {
         node.classList?.contains("services") ||
         node.classList?.contains("cta") ||
         node.classList?.contains("footer") ||
-        node.classList?.contains("hero")
+        node.classList?.contains("hero") ||
+        node.classList?.contains("about-hero")
       ) {
         return true;
       }

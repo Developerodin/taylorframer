@@ -1,0 +1,26 @@
+.page-hero {
+  position: relative;
+  z-index: var(--z-content);
+  background: var(--bg);
+  padding: calc(var(--nav-h) + 120px) var(--pad-x) 64px;
+}
+
+.page-hero__title {
+  margin: 0;
+  font-size: clamp(48px, 8vw, 72px);
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+
+.page-hero--dark {
+  background: var(--dark);
+  color: #fff;
+}
+
+@media (max-width: 809px) {
+  .page-hero {
+    padding: calc(var(--nav-h) + 80px) var(--pad-x) 48px;
+  }
+}

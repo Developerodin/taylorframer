@@ -1,16 +1,147 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="lenis lenis-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blog — Taylor</title>
+    <meta
+      name="description"
+      content="Design articles and notes from Taylor."
+    />
+    <link rel="preconnect" href="https://rsms.me/" />
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
     <link rel="stylesheet" href="../assets/css/main.css" />
   </head>
-  <body>
-    <main style="padding: 120px var(--pad-x)">
-      <h1 class="heading-xl" style="font-size: 48px">Blog</h1>
-      <p style="margin-top: 16px">Coming soon.</p>
-      <p style="margin-top: 24px"><a href="../">← Back home</a></p>
+  <body id="top">
+    <header class="nav is-dark">
+      <a class="nav__logo" href="../">Taylor ®</a>
+      <div class="nav__clock" aria-live="polite">
+        NY : <span id="ny-time">--:--</span>
+      </div>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="../work/">Works</a>
+        <a href="../about/">About</a>
+        <a href="./">Blog</a>
+      </nav>
+      <a class="nav__contact" href="../contact/">Contact</a>
+      <button class="nav__menu" type="button" aria-label="Open menu">Menu</button>
+    </header>
+
+    <div class="nav__drawer" aria-hidden="true">
+      <button class="nav__drawer-close" type="button">Close</button>
+      <nav class="nav__drawer-links" aria-label="Mobile">
+        <a href="../work/">Works</a>
+        <a href="../about/">About</a>
+        <a href="./">Blog</a>
+        <a href="../contact/">Contact</a>
+      </nav>
+    </div>
+
+    <main>
+      <header class="page-hero">
+        <h1 class="page-hero__title">Blog</h1>
+      </header>
+
+      <section class="blog-listing" aria-label="Articles">
+        <div class="blog-listing__grid">
+          <a
+            class="article-card"
+            href="./creating-seamless-digital-experiences-that-convert/"
+          >
+            <div class="article-card__media">
+              <img
+                src="https://framerusercontent.com/images/8FIoQdZKgNwDDhfRMNRQEkK3dJE.png"
+                alt=""
+              />
+            </div>
+            <p class="article-card__meta">
+              <span>Design</span> /
+              <time datetime="2026-01-12">Jan 12, 2026</time>
+            </p>
+            <h3>Creating Seamless Digital Experiences That Convert</h3>
+          </a>
+
+          <a
+            class="article-card"
+            href="./building-brands-that-stand-out-in-a-crowded-market/"
+          >
+            <div class="article-card__media">
+              <img
+                src="https://framerusercontent.com/images/PDVTGgOOmeW5a8YnLLTp1RyC1xg.png"
+                alt=""
+              />
+            </div>
+            <p class="article-card__meta">
+              <span>Design</span> /
+              <time datetime="2026-02-18">Feb 18, 2026</time>
+            </p>
+            <h3>Building Brands That Stand Out in a Crowded Market</h3>
+          </a>
+
+          <a
+            class="article-card"
+            href="./creating-seamless-digital-experiences-that-convert/"
+          >
+            <div class="article-card__media">
+              <img
+                src="https://framerusercontent.com/images/8vEcbr13XA8UqEzxmpiOczUxYa0.png"
+                alt=""
+              />
+            </div>
+            <p class="article-card__meta">
+              <span>Design</span> /
+              <time datetime="2026-03-24">Mar 24, 2026</time>
+            </p>
+            <h3>Why Strong Identity Is the Foundation of Growth</h3>
+          </a>
+
+          <a
+            class="article-card"
+            href="./building-brands-that-stand-out-in-a-crowded-market/"
+          >
+            <div class="article-card__media">
+              <img
+                src="https://framerusercontent.com/images/v73IG4PG4VZx7C5gItrVPR41E.png"
+                alt=""
+              />
+            </div>
+            <p class="article-card__meta">
+              <span>Design</span> /
+              <time datetime="2026-04-02">Apr 2, 2026</time>
+            </p>
+            <h3>Design Systems That Scale With Your Business</h3>
+          </a>
+        </div>
+      </section>
     </main>
+
+    <footer class="footer">
+      <div class="footer__brand">
+        <a class="footer__logo" href="../">Taylor ®</a>
+        <p class="footer__credit">Akin X Ed © 2026</p>
+      </div>
+      <nav class="footer__nav" aria-label="Footer">
+        <a href="../">Home</a>
+        <a href="../work/">Work</a>
+        <a href="../about/">About</a>
+        <a href="./">Blog</a>
+        <a href="../contact/">Contact</a>
+      </nav>
+      <nav class="footer__nav" aria-label="Social">
+        <a href="https://www.behance.net/" target="_blank" rel="noopener"
+          >Behance</a
+        >
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener"
+          >Linkedin</a
+        >
+        <a href="https://www.x.com/" target="_blank" rel="noopener"
+          >X(Twitter)</a
+        >
+      </nav>
+      <a class="footer__back" href="#top" data-back-to-top>Back to top</a>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+    <script type="module" src="../assets/js/main.js"></script>
   </body>
 </html>
